@@ -23,21 +23,16 @@ Route::get('/roles', 'PermissionController@Permission');
 
 Route::group(['middleware' => 'role:vendor'], function() {
 
-   Route::get('/vendor-dashboard', function() {
+   Route::get('/vendor-dashboard', 'vendor\VendorController@index');
 
-      return 'Welcome vendor dashboard';
-      
-   });
+   Route::get('/products', 'vendor\ProductController@index');
+   // Route::resource('products', ProductController::class);
 
 });
 
 Route::group(['middleware' => 'role:admin'], function() {
 
-   Route::get('/admin-dashboard', function() {
-
-      return 'Welcome admin dashboard';
-      
-   });
+   Route::get('/admin-dashboard', 'admin\AdminController@index');
 
 });
 
