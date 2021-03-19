@@ -176,6 +176,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ url('/category') }}" class="nav-link">
+              <i class="nav-icon fas fa-certificate"></i>
+              <p>
+                Category
+                <!-- <span class="badge badge-info right">2</span> -->
+              </p>
+            </a>
+          </li>
           <!-- <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
@@ -228,5 +237,6 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="/bower_components/admin-lte/dist/js/pages/dashboard2.js"></script>
+@yield('page-js-script')
 </body>
 </html>

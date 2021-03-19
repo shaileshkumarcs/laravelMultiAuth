@@ -21,12 +21,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/roles', 'PermissionController@Permission');
 
+Route::post('/image-upload', 'CommonController@imageUploadPost');
+
 Route::group(['middleware' => 'role:vendor'], function() {
 
    Route::get('/vendor-dashboard', 'vendor\VendorController@index');
 
-   Route::get('/products', 'vendor\ProductController@index');
-   // Route::resource('products', ProductController::class);
+   Route::resource('products', 'vendor\ProductController');
+
+   Route::resource('category', 'vendor\CategoryController');
 
 });
 
