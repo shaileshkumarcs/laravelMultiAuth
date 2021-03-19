@@ -223,6 +223,10 @@
 <!-- AdminLTE App -->
 <script src="/bower_components/admin-lte/dist/js/adminlte.js"></script>
 
+<!-- SweetAlert2 -->
+<script src="/bower_components/admin-lte/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="/bower_components/admin-lte/plugins/toastr/toastr.min.js"></script>
 <!-- OPTIONAL SCRIPTS -->
 <script src="/bower_components/admin-lte/dist/js/demo.js"></script>
 

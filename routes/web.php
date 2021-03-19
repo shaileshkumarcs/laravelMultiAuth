@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/roles', 'PermissionController@Permission');
 
 Route::post('/image-upload', 'CommonController@imageUploadPost');
+Route::post('/image-update', 'CommonController@imageUpdatePost');
 
 Route::group(['middleware' => 'role:vendor'], function() {
 
@@ -29,7 +30,10 @@ Route::group(['middleware' => 'role:vendor'], function() {
 
    Route::resource('products', 'vendor\ProductController');
 
-   Route::resource('category', 'vendor\CategoryController');
+   Route::get('category', 'vendor\CategoryController@index');
+   Route::post('category/create', 'vendor\CategoryController@create');
+   Route::post('category/update', 'vendor\CategoryController@update');
+   Route::get('category/delete/{id}', 'vendor\CategoryController@destroy');
 
 });
 
